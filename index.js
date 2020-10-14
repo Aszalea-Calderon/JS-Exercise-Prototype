@@ -104,24 +104,30 @@ Car.prototype.fill = function(gallons){
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
+
 function Baby(favoriteToy) {
+  Person.call(this, favoriteToy);
   this.favoriteToy = favoriteToy;
+ //How do we accept whatever they are wanting?
 }
+
 Baby.prototype = Object.create(Person.prototype);
 
+Baby.prototype.play = function(){
+  return `Playing with ${this.favoriteToy}`;
+}
 
 
 
-// Person.call//
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. This referes to the object you are working int and the things you are passing
+  2. it allows you to see and work with things and add on classes
+  3. It is mainly used to make other objects in constructor funcitons 
+  4. this referes to this item.
 */
 
 
